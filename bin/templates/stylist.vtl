@@ -1,0 +1,16 @@
+
+<hr>
+#if ($stylist) 
+<h1 class="style">$stylist.getName()</h1>
+
+#foreach($client in $stylist.getClients())
+<hr>
+<p><a href="/stylists/$stylist.getId()/$client.getId()" >$client.getDescription()</a></p>
+#end
+
+#else
+<em><p>Oops! We can't seem to find that Stylist.</p></em>
+#end
+
+<a href="/stylists/$stylist.getId()/new/clients">Add a new client</a><br>
+<a href="/stylists">All Stylists</a>
