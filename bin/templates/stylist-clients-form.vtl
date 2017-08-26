@@ -1,0 +1,18 @@
+
+<hr>
+<h1 class="client-form">Add a client to $stylist.getName()'s Salon</h1>
+<form action="/clients" method="post">
+    <p for="stylistId">Select a stylist</p><br>
+    <select name="stylistId" id="stylistId" type="text">
+        #foreach($stylist in $stylists)
+    <option value="$stylist.getId()">$stylist.getName()</option>
+    #end
+    </select><br>
+
+    <p for="description">Name of client:</p><br>
+    <input id="description" name="description" type="text">
+
+
+    <button type="submit" class="btn btn-success">Add Client<button>
+
+</form>
