@@ -1,27 +1,29 @@
 
-<hr>
-<div class="page-header">
-        <h2>Welcome to <small>Christine's Salon</small></h2>
-</div>
-
-    <h3>Here are your Stylists of the month:</h3>
- #if($stylists)
-    <p>Click on a stylist to see how many clients they have already.</p>
-
-    <ul>
-      #foreach ($stylist in $stylists)
-      <li><a href="#">$stylist.getName()</a></li>
-      #end
-    </ul>
-#else
-  <p>There are no clients yet :(</p> 
-#end
-
-  <h3><a href="/stylists">Click here to add a new Stylist</a></h3> 
-
-
-
-
-
+<div class= "index container-fluid">
   <hr>
-  <p>Brought to you by Christine.</p>
+  <div class="page-header">
+          <h2>Welcome to <small>Christine's Salon</small></h2>
+  </div>
+
+      <h3>Here are your Stylists of the month:</h3>
+  #if($stylists)
+      <p>Click on a stylist to see how many clients they have already.</p>
+
+      <ul>
+        #foreach ($stylist in $stylists)
+        <li><a href="/stylists/$stylist.getId()">$stylist.getName()</a></li>
+        #end
+      </ul>
+  #else
+    <p>There are no clients yet :(</p> 
+  #end
+
+    <h3><a href="/stylists">Click here to add a new Stylist</a></h3> 
+
+
+
+
+
+    <hr>
+    <p>Brought to you by Christine.</p>
+  </div>

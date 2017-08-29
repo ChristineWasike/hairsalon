@@ -62,4 +62,18 @@ public class Stylist {
             return Stylist;
         }
     }
+
+    public void delete() {
+        String sql = "DELETE FROM stylists where id=:id";
+        try (Connection con = DB.sql2o.open()) {
+            con.createQuery(sql).addParameter("id", this.getId()).executeUpdate();
+        }
+    }
+
+    public void update(String description) {
+        try (Connection con = DB.sql2o.open()) {
+            String sql = "UPDATE clients SET description = :description WHERE id=:id";
+            con.createQuery(sql).addParameter("description", description).addParameter("id", id).executeUpdate();
+        }
+    }
 }

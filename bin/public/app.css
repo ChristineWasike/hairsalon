@@ -15,6 +15,15 @@ ul {
 .page-header, .stylist {
     text-align: center;
 }
-.stylist, .success, .list, .client-form, .style {
+.stylist, .success, .list, .client-form, .style, .success {
     margin-top: 35px;
+}
+
+.index{
+    height: 650px;
+    /* background-image: url(http://i.imgur.com/PIUY2g6.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-attachment: fixed; */
 }

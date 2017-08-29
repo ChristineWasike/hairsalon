@@ -76,7 +76,11 @@ public class App {
 
       Stylist stylist = Stylist.find(Integer.parseInt(request.queryParams("stylistId")));
       String description = request.queryParams("description");
+      String hairdo = request.queryParams("hair-do");
+      
       Client newClient = new Client(description, stylist.getId());
+
+      
 
       newClient.save();
       model.put("stylist", stylist);
@@ -120,11 +124,12 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    post("/client/delete/:id",(request, reponse) -> {
+    post("/stylist/delete/:id",(request, reponse) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       Client client = Client.find(Integer.parseInt(request.params(":id")));
       client.delete();
       Stylist stylist = Stylist.find(client.getStylistId());
+      stylist.delete();
       model.put("stylist", stylist);
       model.put("template", "templates/styilst.vtl");
       return new ModelAndView(model, layout);

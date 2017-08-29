@@ -3,7 +3,6 @@ apply plugin: 'application'
 
 archivesBaseName = "hairsalon"
 version = '1.0'
-applicationName = "hairsalon"
 mainClassName = "App"
 
 repositories {
@@ -25,5 +24,3 @@ test {
     events "passed", "skipped", "failed"
   }
 }
-
-task stage(dependsOn: ['clean', 'installDist'])
