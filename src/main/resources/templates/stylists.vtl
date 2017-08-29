@@ -11,7 +11,12 @@
     /*<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>*/
     <a href="/stylist/delete/$stylist.getId()" class="card-link"><button class="bt btn-danger">Delete</button></a>
-    <a href="/stylist/update/stylist.getId()" class="card-link"><button class="info">Update</button></a>
+
+    <form action="/stylists/$client.geStylistId()/clients/$client.getId()" method="post">
+  <label for="description">Description</label>
+  <input id="description" name="description" type="text">
+  <button type="submit" class="btn btn-info">Update client</button>
+</form>
    
   </div>
 </div>
