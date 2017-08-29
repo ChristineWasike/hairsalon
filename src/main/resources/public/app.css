@@ -28,6 +28,7 @@ ul {
     background-attachment: fixed; */
 }
 
-.nav-item {
-    color: whitesmoke;
+.navbar-nav {
+    text-align: center;
+    color: white;
 }
