@@ -3,6 +3,7 @@
 <h1 class="list">All Stylists:</h1>
 <ul>
     #foreach ($stylist in $stylists)
+    <div class = col-md-4>
     <div class="card" style="width: 20rem;">
       <img class="card-img-top" src="/stylists/stlylist.getImage()" alt="Card image cap">
   <div class="card-body">
@@ -10,8 +11,10 @@
     /*<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>*/
     <a href="/stylist/delete/$stylist.getId()" class="card-link"><button class="bt btn-danger">Delete</button></a>
+    <a href="/stylist/update/stylist.getId()" class="card-link"><button class="info">Update</button></a>
    
   </div>
+</div>
 </div>
     #end
 </ul>
