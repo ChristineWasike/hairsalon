@@ -4,6 +4,7 @@ apply plugin: 'application'
 archivesBaseName = "hairsalon"
 version = '1.0'
 mainClassName = "App"
+applicationName = "hairsalon"
 
 repositories {
   mavenCentral()
