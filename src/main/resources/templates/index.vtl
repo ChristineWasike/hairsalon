@@ -1,24 +1,53 @@
 
-<div class= "index container-fluid">
-  <hr>
-  <div class="page-header">
-          <h2>Welcome to <small>Christine's Salon</small></h2>
-  </div>
+<div class="index container-fluid">
+    <hr>
+    <div class="page-header">
+        <h2>Welcome to <small>Christine's Salon</small></h2>
+    </div>
 
-      <h3>Here are your Stylists of the month:</h3>
-  #if($stylists)
-      <p>Click on a stylist to see how many clients they have already.</p>
+    <h3>Here are your Stylists of the month:</h3>
+    #if($stylists)
+    <p>Click on a stylist to see how many clients they have already.</p>
 
-      <ul>
+    <ul>
         #foreach ($stylist in $stylists)
         <li><a href="/stylists/$stylist.getId()">$stylist.getName()</a></li>
         #end
-      </ul>
-  #else
-    <p>There are no clients yet :(</p> 
-  #end
+    </ul>
+    #else
+    <p>There are no clients yet :(</p>
+    #end
 
-    <h3><a href="/stylists">Click here to add a new Stylist</a></h3> 
+    <div class="row">
+        <div class=col-md-4>
+            <div class="card" style="width: 20rem;">
+                <a href="/stylists"><img class="card-img-top" src="http://i.imgur.com/2rlQBmq.jpg" alt="Card image cap"></a>
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class=col-md-4>
+            <div class="card" style="width: 20rem;">
+                <a href="/stylists"><img class="card-img-top" src="http://i.imgur.com/caBkzsg.jpg" alt="Card image cap"></a>
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class=col-md-4>
+            <div class="card" style="width: 20rem;">
+                <a href="/stylists"><img class="card-img-top" src="http://i.imgur.com/0MNpptH.jpg" alt="Card image cap"></a>
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3><a href="/stylists">Click here to add a new Stylist</a></h3>
 
 
 
@@ -26,4 +55,4 @@
 
     <hr>
     <p>Brought to you by Christine.</p>
-  </div>
+</div>
