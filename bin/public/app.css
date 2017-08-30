@@ -1,6 +1,6 @@
 body {
     font-family: 'Work Sans', sans-serif;
-    font-size: 18px;    
+    font-size: 16px;    
 }
 ul {
     list-style-type: none; 
@@ -26,4 +26,9 @@ ul {
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.3);
     background-attachment: fixed; */
+}
+
+.navbar-nav {
+    text-align: center;
+    color: white;
 }

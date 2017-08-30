@@ -1,10 +1,18 @@
 import java.util.List;
 import java.util.ArrayList;
 import org.sql2o.*;
+import java.util.Random;
 
 public class Stylist {
     private String name;
     private int id;
+    private Random randomImg = new Random();
+    String[] images = {"http://i.imgur.com/2rlQBmq.jpg", "http://i.imgur.com/caBkzsg.jpg","http://i.imgur.com/0MNpptH.jpg"};
+
+    public String getImg() {
+        String imageLink = images[randomImg.nextInt(images.length)];
+        return imageLink;
+    }
 
     public Stylist(String name) {
         this.name = name;

@@ -5,7 +5,7 @@
 
 #foreach($client in $stylist.getClients())
 <hr>
-<p><a href="/stylists/$stylist.getId()/$client.getId()" >$client.getDescription()</a></p>
+<p><a href="/stylists/$stylist.getId()/clients/$client.getId()" >$client.getDescription()</a></p>
 #end
 
 #else
